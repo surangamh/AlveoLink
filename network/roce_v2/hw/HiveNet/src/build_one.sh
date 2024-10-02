@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Copyright 2019-2022 Xilinx, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-if [ $1 == 'clean' ]
+if [ "$1" = 'clean' ]
 then
     cd HiveNet_bd
     rm -r */
@@ -27,5 +29,5 @@ then
     rm -r xgui
     rm -r .Xil
 else
-    vivado -mode batch -source HiveNet_bd.tcl -tclargs $1 $2
+    vivado -mode batch -source HiveNet_bd.tcl -tclargs "$1" "$2"
 fi
