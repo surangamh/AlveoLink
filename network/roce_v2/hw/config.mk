@@ -38,15 +38,15 @@ POSTSYSLINKTCL ?= $(shell readlink -f $(ROCEV2_DIR)/hw/post_sys_link.tcl)
 #Create configuration file for current design and settings
 
 ifeq ($(INTERFACE), 0)
-create-conf-file: $(CUR_DIR)/conn_u55c_if0.cfg
-	cp $^ ./conn_u55c_if0.tmp.cfg
-	echo "[advanced]" >> conn_u55c_if0.tmp.cfg
-	echo "param=compiler.userPostSysLinkOverlayTcl=$(POSTSYSLINKTCL)" >> conn_u55c_if0.tmp.cfg 
+create-conf-file: $(CUR_DIR)/conn_u280_if0.cfg
+	cp $^ ./conn_u280_if0.tmp.cfg
+	echo "[advanced]" >> conn_u280_if0.tmp.cfg
+	echo "param=compiler.userPostSysLinkOverlayTcl=$(POSTSYSLINKTCL)" >> conn_u280_if0.tmp.cfg 
 else ifeq ($(INTERFACE), 3)
-create-conf-file: $(CUR_DIR)/conn_u55c_if2.cfg
-	cp $^ ./conn_u55c_if2.tmp.cfg
-	echo "[advanced]" >> conn_u55c_if2.tmp.cfg
-	echo "param=compiler.userPostSysLinkOverlayTcl=$(POSTSYSLINKTCL)" >> conn_u55c_if2.tmp.cfg 
+create-conf-file: $(CUR_DIR)/conn_u280_if2.cfg
+	cp $^ ./conn_u280_if2.tmp.cfg
+	echo "[advanced]" >> conn_u280_if2.tmp.cfg
+	echo "param=compiler.userPostSysLinkOverlayTcl=$(POSTSYSLINKTCL)" >> conn_u280_if2.tmp.cfg 
 endif
 
 
