@@ -60,8 +60,8 @@ HOST_ARCH ?= x86
 ifeq ($(PLATFORM),)
 PLATFORM := $(DEVICE)
 endif
-ifeq ($(PLATFORM),)
-PLATFORM := xilinx_u55c_gen3x16_xdma_3_202210_1 
+ifeq ($(PLATFORM),) 
+PLATFORM := xilinx_u280_gen3x16_xdma_1_202211_1 
 endif
 
 # #################### Checking if PLATFORM in whitelist ############################
@@ -130,9 +130,9 @@ VPP_FLAGS +=  -D AL_mtuBytes=1472 -D AL_maxConnections=16 -D AL_netDataBits=512 
 VPP_FLAGS +=  -I $(XFLIB_DIR)/common/hw/include -I $(XFLIB_DIR)/kernel/hw/include -I $(XFLIB_DIR)/adapter/roce_v2/hw/include -I $(XFLIB_DIR)/examples/network/roce_v2/generator_collector/kernel
 
 ifeq ($(INTERFACE), 0)
-VPP_LDFLAGS += --config $(CUR_DIR)/conn_u55c_if0.tmp.cfg
+VPP_LDFLAGS += --config $(CUR_DIR)/conn_u280_if0.tmp.cfg
 else ifeq ($(INTERFACE), 3)
-VPP_LDFLAGS += --config $(CUR_DIR)/conn_u55c_if2.tmp.cfg
+VPP_LDFLAGS += --config $(CUR_DIR)/conn_u280_if2.tmp.cfg
 endif
 
 

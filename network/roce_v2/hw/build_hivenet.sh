@@ -12,7 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-if [ $1 == 'def' ]
+#!/bin/bash
+
+if [ "$1" == 'def' ]
 then
     cd HiveNet
     if [ ! -d "./build" ]
