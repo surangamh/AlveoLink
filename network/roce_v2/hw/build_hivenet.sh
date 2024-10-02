@@ -14,7 +14,7 @@
 
 #!/bin/bash
 
-if [ "$1" == 'def' ]
+if [ "$1" = 'def' ]
 then
     cd HiveNet
     if [ ! -d "./build" ]
